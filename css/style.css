@@ -21,6 +21,130 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.loader-wrapper {
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #242f3f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #fff;
+  -webkit-animation: loader 2s infinite ease;
+          animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  -webkit-animation: loader-inner 2s infinite ease-in;
+          animation: loader-inner 2s infinite ease-in;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
 body {
   background-color: var(--secondary-color);
   font-size: var(--regular-font);
@@ -115,8 +239,13 @@ body p {
   font-family: var(--logo);
   font-weight: 800;
   font-size: calc(var(--regular-font) * 3);
-  color: var(--primary-color);
   letter-spacing: 0.1rem;
+}
+
+.main .header .header__content nav .header__logo a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--primary-color);
 }
 
 .main .header .header__content nav .header__nav-links {
@@ -904,8 +1033,8 @@ body p {
   margin-top: calc(var(--regular-font) * 6);
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: calc(var(--regular-font) * 2);
   place-items: center;
 }
@@ -1116,7 +1245,7 @@ body p {
   padding: 1rem;
   background-color: var(--third-color);
   font-size: 1rem;
-  height: 6vh;
+  height: 7vh;
   width: 100%;
   text-align: center;
   position: fixed;
@@ -1134,6 +1263,19 @@ body p {
 
 .contact__main {
   background-color: white;
+}
+
+.contact__main .header .header__logo {
+  font-weight: 800;
+  font-size: calc(var(--regular-font) * 3);
+  letter-spacing: 0.1rem;
+}
+
+.contact__main .header .header__logo a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--primary-color);
+  font-family: var(--logo);
 }
 
 .contact__main .contact * {
@@ -1369,6 +1511,10 @@ body p {
   .contact__main .header .header__content nav .header__nav-links li,
   .main .header .header__content nav .header__nav-links li {
     opacity: 0;
+  }
+  .contact__main .header .header__content nav .header__nav-links li a,
+  .main .header .header__content nav .header__nav-links li a {
+    font-size: calc(var(--regular-font) * 1.4);
   }
   .contact__main .header .header__content nav .nav-active,
   .main .header .header__content nav .nav-active {

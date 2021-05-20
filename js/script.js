@@ -63,7 +63,7 @@ TxtType.prototype.tick = function () {
   }, delta);
 };
 
-window.onload = function () {
+window.addEventListener("load", function () {
   // typewriter code
   var elements = document.getElementsByClassName("typewrite");
   for (var i = 0; i < elements.length; i++) {
@@ -167,4 +167,4 @@ window.onload = function () {
       return;
     }
   });
-};
+});
