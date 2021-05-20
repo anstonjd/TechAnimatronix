@@ -342,7 +342,7 @@ body p {
 }
 
 .main .header .header__content .header__brandline {
-  padding: calc(var(--regular-font) * 2);
+  padding: 0 calc(var(--regular-font) * 2);
   text-align: center;
   margin: auto;
   width: 60%;
@@ -1584,9 +1584,7 @@ body p {
   }
   .contact__main .about .about__team .about__team-card-container,
   .main .about .about__team .about__team-card-container {
-    -webkit-transform: translateX(-15%);
-            transform: translateX(-15%);
-    margin: auto;
+    margin: 0 auto;
   }
   .contact__main .footer .footer__logo-container,
   .main .footer .footer__logo-container {

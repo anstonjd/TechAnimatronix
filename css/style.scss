@@ -253,7 +253,7 @@ body {
         }
       }
       .header__brandline {
-        padding: calc(var(--regular-font) * 2);
+        padding: 0 calc(var(--regular-font) * 2);
         text-align: center;
         margin: auto;
         width: 60%;
@@ -1667,8 +1667,8 @@ body {
       }
       .about__team {
         .about__team-card-container {
-          transform: translateX(-15%);
-          margin: auto;
+          // transform: translateX(-15%);
+          margin: 0 auto;
         }
       }
     }
